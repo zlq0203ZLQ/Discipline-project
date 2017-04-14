@@ -176,7 +176,7 @@
   font-family: 'Arial'; }
 
 .article {
-  width: 50%;
+  width: 70%;
   height: auto;
   position: absolute;
   left: 22%;
@@ -211,7 +211,7 @@
   font-size: 3rem;
   text-align: center;
   line-height: 45px;
-  margin: 4% auto 0 auto;
+  margin: 2% auto 0 auto;
   color: #fff; }
 
 .detail {
@@ -284,7 +284,7 @@
   top: 0; }
 
 .part-three {
-  width: 45%;
+  width: 50%;
   height: auto;
   position: absolute;
   left: 22%; }
@@ -311,7 +311,7 @@
   width: 25%;
   height: auto;
   position: absolute;
-  left: 6%;
+  left: 8%;
   top: 8%;
   text-align: center; }
 
@@ -326,7 +326,7 @@
   color: #74a5d0; }
 
 .need {
-  width: 72%;
+  width: 100%;
   height: auto;
   font-size: 16px;
   font-size: 1.6rem;
@@ -378,7 +378,7 @@
   color: #fff; }
 
 .location {
-  width: 25%;
+  width: 60%;
   height: auto;
   position: absolute;
   font-size: 16px;
@@ -399,7 +399,7 @@
   box-shadow: 1px 1px 3px 3px #333;
   position: absolute;
   left: 25%;
-  top: 48%; }
+  bottom: 48%; }
 
 .btn:hover {
   color: orange; }
@@ -411,7 +411,7 @@
   font-size: 16px;
   font-size: 1.6rem;
   left: 25%;
-  top: 55%;
+  bottom: 40%;
   color: #81c1ce; }
 
 .website a {
@@ -424,7 +424,7 @@
   background: url(../image/sprite1.png) no-repeat;
   position: absolute;
   left: 25%;
-  top: 75%; }
+  bottom: 30%; }
 
 .back {
   width: 100%;
@@ -736,7 +736,7 @@
     background: url(../image/sprite1.png) no-repeat;
     position: absolute;
     left: 5%;
-    top: 48%; }
+    top: 50%; }
 
   .back {
     width: 40px;

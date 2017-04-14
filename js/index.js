@@ -122,17 +122,50 @@
 		var label = new BMap.Label("欣才IT学院", opts); // 创建文本标注对象
 		label.setStyle({
 			color: "red",
-			fontSize: "14px",
+			fontSize: "12px",
 			height: "20px",
 			lineHeight: "20px",
-			borderRadius: "5px",
+			borderRadius: "4px",
 			fontFamily: "微软雅黑"
 		});
-		map.addOverlay(label);		
-			
+		map.addOverlay(label);            
+		map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+		map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用	
 		})
 		$("#closed").on("click", function () {
 			$(".map").hide();
+		})
+
+
+		$(window).resize(function(){
+			var w_w = $(window).width();
+			$(".map").css({"width":w_w});
+			$(".map").html('<div id="allmap"></div><div id="closed">X</div>');
+			var map = new BMap.Map("allmap");
+			var point = new BMap.Point(118.786511, 32.029147);
+			map.centerAndZoom(point, 15);
+			var marker = new BMap.Marker(point); // 创建标注
+			map.addOverlay(marker); // 将标注添加到地图中
+			marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+			var opts = {
+				position: point, // 指定文本标注所在的地理位置
+				offset: new BMap.Size(10, -70) //设置文本偏移量
+			}
+			var label = new BMap.Label("欣才IT学院", opts); // 创建文本标注对象
+			label.setStyle({
+				color: "red",
+				fontSize: "12px",
+				height: "20px",
+				lineHeight: "20px",
+				borderRadius: "4px",
+				fontFamily: "微软雅黑"
+			});
+			map.addOverlay(label);            
+			map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+			map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+			$("#closed").on("click", function () {
+			$(".map").hide();
+			})
 		})
 
 
